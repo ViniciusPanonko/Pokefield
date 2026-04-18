@@ -1,5 +1,7 @@
 # 🛡️ Pokéfield Dex & Team Builder
 
+🚀 **Aplicativo Online (Live Demo):** [pokefield.vercel.app](https://pokefield.vercel.app)
+
 Bem-vindo ao **Pokéfield**, um projeto universitário e portfólio de nível **Profissional Pleno** desenvolvido para a engenharia de busca, análise estrutural e modelagem de times táticos dentro do ecossistema competitivo Pokémon.
 
 ## 🎥 Aplicação em Ação
