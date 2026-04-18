@@ -37,9 +37,9 @@ Esta aplicação foi desenvolvida descartando soluções limitadas padrão (como
 
 ## 🚀 Como Rodar o Projeto
 
-1. Clone o projeto de forma padrão:
+1. Clone o projeto para a sua máquina:
 ```bash
-git clone <SUA_URL_DO_GITHUB_AQUI>
+git clone https://github.com/ViniciusPanonko/Pokefield.git
 cd Pokefield
 ```
 2. Instale os módulos:
