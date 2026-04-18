@@ -6,7 +6,7 @@ Bem-vindo ao **Pokéfield**, um projeto universitário e portfólio de nível **
 
 *(Veja abaixo uma execução real das escolhas, fluxos e design arquitetural no app nativo)*
 
-![Demonstração do Fluxo Pokéfield](public/docs/showcase.webp)
+![Demonstração do Fluxo Pokéfield](public/docs/showcase_hq.webp)
 
 ---
 
