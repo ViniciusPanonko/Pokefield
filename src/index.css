@@ -1,0 +1,159 @@
+:root {
+  --bg-color: #1a0b0b;
+  --surface-color: #2b1111;
+  --surface-hover: #401818;
+  --text-primary: #f8fafc;
+  --text-secondary: #fca5a5;
+  --accent-color: #ef4444;
+  --danger-color: #f87171;
+  --success-color: #10b981;
+  --border-radius: 12px;
+  --glass-bg: rgba(43, 17, 17, 0.8);
+  --glass-border: rgba(239, 68, 68, 0.2);
+  --shadow-elevated: 0 10px 15px -3px rgba(220, 38, 38, 0.2), 0 4px 6px -2px rgba(220, 38, 38, 0.1);
+}
+
+@keyframes rotomFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(5deg); }
+  66% { transform: translateY(-10px) rotate(-5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.rotom-bg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  opacity: 0.8;
+  animation: rotomFloat 6s ease-in-out infinite;
+  z-index: 100;
+  pointer-events: none;
+  filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.5));
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.btn {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.glass-card {
+  background: var(--surface-color);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-elevated);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Base Typings Styles used in Pokemon */
+.type-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.type-normal { background: #A8A878; color: #fff; }
+.type-fire { background: #F08030; color: #fff; }
+.type-water { background: #6890F0; color: #fff; }
+.type-electric { background: #F8D030; color: #fff; }
+.type-grass { background: #78C850; color: #fff; }
+.type-ice { background: #98D8D8; color: #fff; }
+.type-fighting { background: #C03028; color: #fff; }
+.type-poison { background: #A040A0; color: #fff; }
+.type-ground { background: #E0C068; color: #fff; }
+.type-flying { background: #A890F0; color: #fff; }
+.type-psychic { background: #F85888; color: #fff; }
+.type-bug { background: #A8B820; color: #fff; }
+.type-rock { background: #B8A038; color: #fff; }
+.type-ghost { background: #705898; color: #fff; }
+.type-dragon { background: #7038F8; color: #fff; }
+.type-dark { background: #705848; color: #fff; }
+.type-steel { background: #B8B8D0; color: #fff; }
+.type-fairy { background: #EE99AC; color: #fff; }
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
