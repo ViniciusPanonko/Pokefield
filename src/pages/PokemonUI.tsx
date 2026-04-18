@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { fetchPokemonDetailedGraphQL } from '../services/pokeApi';
 import { useTeam } from '../context/TeamContext';
@@ -301,7 +301,7 @@ export default function PokemonUI() {
 
                 {apiData.pokemon_v2_pokemonstats.map((s: any) => {
                   const sName = s.pokemon_v2_stat.name as keyof EVSet;
-                  const finalStat = calculateTotalStat(sName, s.base_stat, ivs[sName], evs[sName], level, { increasedStat: null, decreasedStat: null, name: natureName });
+                  const finalStat = calculateTotalStat(sName, s.base_stat, ivs[sName], evs[sName], level, natureModifier);
                   return (
                     <React.Fragment key={sName}>
                       <span style={{ textTransform: 'capitalize', color: 'white', fontWeight: 'bold' }}>{sName === 'special-attack' ? 'Sp.Atk' : sName === 'special-defense' ? 'Sp.Def' : sName}</span>

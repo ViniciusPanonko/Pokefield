@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTeam } from '../context/TeamContext';
 import { ShieldAlert, Trash2, Edit2 } from 'lucide-react';
 import { Link } from 'react-router-dom';

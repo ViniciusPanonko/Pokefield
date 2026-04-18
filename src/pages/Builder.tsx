@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { fetchAllPokemonGraphQL } from '../services/pokeApi';
 import { Link } from 'react-router-dom';
 import { Search, ArrowDownWideNarrow } from 'lucide-react';

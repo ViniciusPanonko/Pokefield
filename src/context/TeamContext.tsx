@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import type { StatName, NatureModifier } from '../utils/mathStats';
+import type { NatureModifier } from '../utils/mathStats';
 
 export interface EVSet {
   hp: number; attack: number; defense: number;
