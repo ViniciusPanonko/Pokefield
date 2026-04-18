@@ -301,7 +301,7 @@ export default function PokemonUI() {
 
                 {apiData.pokemon_v2_pokemonstats.map((s: any) => {
                   const sName = s.pokemon_v2_stat.name as keyof EVSet;
-                  const finalStat = calculateTotalStat(sName, s.base_stat, ivs[sName], evs[sName], level, natureModifier);
+                  const finalStat = calculateTotalStat(sName, s.base_stat, ivs[sName], evs[sName], level, { increasedStat: null, decreasedStat: null });
                   return (
                     <React.Fragment key={sName}>
                       <span style={{ textTransform: 'capitalize', color: 'white', fontWeight: 'bold' }}>{sName === 'special-attack' ? 'Sp.Atk' : sName === 'special-defense' ? 'Sp.Def' : sName}</span>
